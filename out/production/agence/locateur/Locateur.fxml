@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="707.0" style="-fx-background-color: #4d6b83;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="locateur.LocateurController">
+   <children>
+      <Label layoutX="33.0" layoutY="45.0" text="Numero carte">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="33.0" layoutY="120.0" text="Nom">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="33.0" layoutY="206.0" text="Téléphone">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="carttxt" layoutX="33.0" layoutY="73.0" />
+      <TextField fx:id="nomtxt" layoutX="33.0" layoutY="149.0" />
+      <TextField fx:id="teltxt" layoutX="33.0" layoutY="245.0" />
+      <Separator layoutX="226.0" layoutY="3.0" orientation="VERTICAL" prefHeight="345.0" prefWidth="3.0" />
+      <Button fx:id="supprimerbt" layoutX="522.0" layoutY="349.0" mnemonicParsing="false" onAction="#Supprimer" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Supprimer">
+         <effect>
+            <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+         </effect>
+      </Button>
+      <TableView fx:id="tablelocateur" layoutX="233.0" layoutY="7.0" onMouseClicked="#clockLingne" prefHeight="318.0" prefWidth="464.0" style="-fx-background-color: #4d6b83">
+        <columns>
+          <TableColumn fx:id="colonneid" prefWidth="58.0" text="ID" />
+            <TableColumn fx:id="colonnecarte" prefWidth="140.0" text="Numero carte" />
+            <TableColumn fx:id="colonnenom" prefWidth="142.0" text="Nom" />
+          <TableColumn fx:id="colonnetel" prefWidth="123.0" text="Téléphon" />
+        </columns>
+         <effect>
+            <DropShadow height="15.36" radius="62.355000000000004" width="236.06" />
+         </effect>
+      </TableView>
+      <Separator layoutX="8.0" layoutY="346.0" prefHeight="0.0" prefWidth="685.0" />
+      <Button fx:id="validerbt" layoutX="33.0" layoutY="349.0" mnemonicParsing="false" onAction="#Insert" style="-fx-background-color: #4d6b83; -fx-background-radius: 15;" text="Valider">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="annulerbt" layoutX="146.0" layoutY="349.0" mnemonicParsing="false" onAction="#Annuler" style="-fx-background-color: #4d6b83; -fx-background-radius: 15;" text="Annuler">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="modifierbt" layoutX="281.0" layoutY="349.0" mnemonicParsing="false" onAction="#Modifier" style="-fx-background-color: #4d6b83; -fx-background-radius: 15;" text="Modifier">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

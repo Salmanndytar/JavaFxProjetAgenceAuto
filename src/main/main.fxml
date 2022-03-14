@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+   <children>
+      <Pane layoutX="1.0" prefHeight="230.0" prefWidth="398.0" style="-fx-background-color: #4d6b83;">
+         <children>
+            <TextField fx:id="emailtxt" layoutX="14.0" layoutY="91.0" prefHeight="33.0" prefWidth="157.0" promptText="Votre mail" style="-fx-background-color: #4d6b83;">
+               <effect>
+                  <InnerShadow height="0.0" radius="1.8125" width="9.25" />
+               </effect></TextField>
+            <PasswordField fx:id="passwordtxt" layoutX="14.0" layoutY="136.0" prefHeight="33.0" prefWidth="157.0" promptText="Votre mot de passe" style="-fx-background-color: #4d6b83;">
+               <effect>
+                  <InnerShadow height="9.22" radius="4.1075" width="9.21" />
+               </effect></PasswordField>
+            <Button layoutX="14.0" layoutY="187.0" mnemonicParsing="false" onAction="#getLogin" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Valider" textFill="#000000">
+               <effect>
+                  <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+               </effect>
+            </Button>
+            <Separator layoutX="1.0" layoutY="183.0" prefHeight="1.0" prefWidth="183.0" style="-fx-background-color: #000000;" />
+            <ImageView fitHeight="135.0" fitWidth="205.0" layoutX="191.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icones/im.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="173.0" fitWidth="205.0" layoutX="191.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icones/im.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="40.0" layoutY="28.0" prefHeight="42.0" prefWidth="306.0" text=" Parque Automobile zi-Elenda " textFill="#f2eded">
+               <font>
+                  <Font name="Arial Narrow Bold" size="25.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.effect.DropShadow?>
+<AnchorPane prefHeight="472.0" prefWidth="923.0" style="-fx-background-color: #4d6b83;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="services.location.ListeLocationController">
+   <children>
+      <Button fx:id="supprimerbt" layoutX="14.0" layoutY="428.0" mnemonicParsing="false" onAction="#Supprimer" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Supprimer" >
+          <effect>
+              <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+          </effect>
+      </Button>
+      <TableView fx:id="tablelocation" layoutX="7.0" layoutY="14.0" style="-fx-background-color: #4d6b83;" onMouseClicked="#clockLingne" prefHeight="405.0" prefWidth="916.0">
+        <columns>
+            <TableColumn fx:id="colid" prefWidth="71.99996948242188" text="N°" />
+            <TableColumn fx:id="colDateD" prefWidth="108.0" text="Date debu" />
+            <TableColumn fx:id="colDateF" prefWidth="98.0" text="Date fin" />
+            <TableColumn fx:id="colvoiture" prefWidth="124.0" text="Voiture" />
+            <TableColumn fx:id="collocateur" prefWidth="152.0" text="Locateur" />
+            <TableColumn fx:id="colagent" prefWidth="157.0" text="Agent" />
+          <TableColumn fx:id="colcaissier" prefWidth="138.0" text="Caissier" />
+          <TableColumn fx:id="coldatV" prefWidth="112.0" text="Date validee" />
+        </columns>
+          <effect>
+              <DropShadow height="15.36" radius="62.355000000000004" width="236.06" />
+          </effect>
+      </TableView>
+   </children>
+</AnchorPane>

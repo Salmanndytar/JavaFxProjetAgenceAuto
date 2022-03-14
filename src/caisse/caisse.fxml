@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="750.0" style="-fx-background-color: #4d6b83;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caisse.ControlCaisse">
+   <children>
+      <Button fx:id="validerbt" layoutX="27.0" layoutY="360.0" mnemonicParsing="false" onAction="#Insert" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Valide">
+          <effect>
+              <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+          </effect>
+      </Button>
+      <Button fx:id="imprimerbt" layoutX="619.0" layoutY="356.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Imprimer">
+          <effect>
+              <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+          </effect>
+      </Button>
+      <Label layoutX="27.0" layoutY="183.0" text="Nom" />
+      <Label layoutX="26.0" layoutY="241.0" text="Prenom" />
+      <Label layoutX="26.0" layoutY="294.0" text="Telephone" />
+      <TextField fx:id="nomtxt" layoutX="25.0" layoutY="200.0" />
+      <TextField fx:id="prenomtxt" layoutX="25.0" layoutY="258.0" />
+      <TextField fx:id="teltxt" layoutX="25.0" layoutY="311.0" />
+      <TableView fx:id="tablecaissier" layoutX="242.0" layoutY="22.0" onMouseClicked="#clockLingne" prefHeight="301.0" prefWidth="496.0">
+        <columns>
+          <TableColumn fx:id="colonneid" prefWidth="81.0" text="Identifiant" />
+            <TableColumn fx:id="colonnenom" prefWidth="120.0" text="Nom" />
+            <TableColumn fx:id="colonneprenom" prefWidth="160.0" text="Prenom" />
+          <TableColumn fx:id="colonnetel" prefWidth="134.0" text="telephone" />
+        </columns>
+          <effect>
+              <DropShadow height="15.36" radius="62.355000000000004" width="236.06" />
+          </effect>
+      </TableView>
+      <Separator layoutX="213.0" layoutY="6.0" orientation="VERTICAL" prefHeight="388.0" prefWidth="14.0" />
+      <Separator layoutX="9.0" layoutY="344.0" prefHeight="0.0" prefWidth="732.0" />
+      <Button fx:id="annulerbt" layoutX="138.0" layoutY="360.0" mnemonicParsing="false" onAction="#Annuler" style="-fx-background-color: #4d6b83; -fx-background-radius: 15;" text="Annuler">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="modifierbt" layoutX="242.0" layoutY="356.0" mnemonicParsing="false" onAction="#Modifier" style="-fx-background-color: #4d6b83; -fx-background-radius: 15;" text="Modifier">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="supprimerbt" layoutX="459.0" layoutY="356.0" mnemonicParsing="false" onAction="#Supprimer" style="-fx-background-color: #4d6b83; -fx-background-radius: 15;" text="Supprimer">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ImageView fx:id="imageView" fitHeight="131.0" fitWidth="149.0" layoutX="25.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="28.0" layoutY="22.0" mnemonicParsing="false" onAction="#LoadImg" text="Nouveau image" />
+   </children>
+</AnchorPane>

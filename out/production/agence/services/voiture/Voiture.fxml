@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="507.0" prefWidth="951.0" style="-fx-background-color: #4d6b83;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="services.voiture.voiturController">
+   <children>
+      <Button fx:id="validebt" layoutX="22.0" layoutY="467.0" mnemonicParsing="false" onAction="#insertion" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Valider">
+         <effect>
+            <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+         </effect>
+      </Button>
+      <Button fx:id="imprimerbt" layoutX="843.0" layoutY="467.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Imprimer">
+           <effect>
+               <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+           </effect>
+        </Button>
+      <TableView fx:id="tablevoiture" layoutX="205.0" layoutY="43.0" onMouseClicked="#clockLingne" prefHeight="409.0" prefWidth="775.0" style="-fx-background-color: #4d6b83;">
+        <columns>
+          <TableColumn fx:id="colmatricule" prefWidth="88.0" text="Matricule" />
+            <TableColumn fx:id="colmarque" prefWidth="92.0" text="Marque" />
+            <TableColumn fx:id="colmodele" prefWidth="84.0" text="Modele" />
+            <TableColumn fx:id="colcouleur" prefWidth="89.0" text="Couleur" />
+            <TableColumn fx:id="colpoids" prefWidth="70.0" text="Poids" />
+            <TableColumn fx:id="colenergie" prefWidth="79.0" text="Energie" />
+            <TableColumn fx:id="colplace" prefWidth="58.0" text="Place" />
+            <TableColumn fx:id="colprix" prefWidth="82.0" text="Prix/jr" />
+          <TableColumn fx:id="coldate" prefWidth="115.0" text="Date  circulation" />
+            <TableColumn fx:id="coldisfonction" prefWidth="103.0" text="Disfonction" />
+            <TableColumn fx:id="coletat" prefWidth="47.0" text="Etat" />
+        </columns>
+         <effect>
+            <DropShadow height="15.36" radius="62.355000000000004" width="236.06" />
+         </effect>
+      </TableView>
+      <Separator layoutY="453.0" prefHeight="4.0" prefWidth="974.0" style="-fx-background-color: #000000;" />
+      <ComboBox fx:id="couleurcb" layoutX="22.0" layoutY="168.0" prefHeight="30.0" prefWidth="149.0" promptText="Choix : couleurs" />
+      <TextField fx:id="modeletxt" layoutX="23.0" layoutY="131.0" promptText="Modele" />
+      <TextField fx:id="marquetxt" layoutX="22.0" layoutY="85.0" promptText="Marque" />
+      <TextField fx:id="matricultxt" layoutX="22.0" layoutY="43.0" promptText="Matriule" />
+      <ComboBox fx:id="poidscb" layoutX="23.0" layoutY="218.0" prefHeight="30.0" prefWidth="149.0" promptText="Choix : poids" />
+      <ComboBox fx:id="energiecb" layoutX="23.0" layoutY="299.0" prefHeight="30.0" prefWidth="149.0" promptText="Choix : energie" />
+      <ComboBox fx:id="placecb" layoutX="23.0" layoutY="338.0" prefHeight="30.0" prefWidth="149.0" promptText="Choix : Parque / Palce" />
+      <TextField fx:id="prixtxt" layoutX="23.0" layoutY="378.0" promptText="Prix /jr" />
+      <DatePicker fx:id="datetxt" layoutX="23.0" layoutY="412.0" prefHeight="30.0" prefWidth="149.0" promptText="Date mise en circulation" />
+      <Button layoutX="167.0" layoutY="467.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Annuler">
+           <effect>
+               <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+           </effect>
+      </Button>
+      <Button fx:id="supprimerbt" layoutX="584.0" layoutY="467.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Spprimer">
+          <effect>
+              <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+          </effect>
+      </Button>
+       <Button fx:id="modifierbt" layoutX="479.0" layoutY="467.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Modifier">
+           <effect>
+               <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+           </effect>
+       </Button>
+       <Button layoutX="868.0" layoutY="7.0" mnemonicParsing="false" onAction="#Actualiser" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Actualiser">
+           <effect>
+               <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+           </effect>
+       </Button>
+      <ComboBox fx:id="vitessecb" layoutX="23.0" layoutY="260.0" prefWidth="150.0" promptText="Vitesse" />
+   </children>
+</AnchorPane>

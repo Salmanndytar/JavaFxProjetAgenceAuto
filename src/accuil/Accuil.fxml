@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="modifier" prefHeight="531.0" prefWidth="1001.0" style="-fx-background-color: #4d6b83;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accuil.ControlAccuil">
+   <children>
+      <Label fx:id="message" layoutX="283.0" layoutY="91.0" prefHeight="96.0" prefWidth="527.0" textFill="#dce5e194">
+         <font>
+            <Font size="53.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.37" specularConstant="2.0" specularExponent="4.82" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="157.77" elevation="118.73">
+                     <color>
+                        <Color red="0.06880000233650208" green="0.30357998609542847" blue="0.4300000071525574" opacity="0.508474588394165" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <MenuBar fx:id="menuser" layoutX="6.0" layoutY="7.0" prefHeight="30.0" prefWidth="512.0">
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#Userfxml" text="User">
+            <items>
+                  <Menu mnemonicParsing="false" text="gestion user">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#Agentfxml" text="Agents" />
+                        <MenuItem mnemonicParsing="false" onAction="#Caissefxml" text="Caissier(e)" />
+                        <MenuItem mnemonicParsing="false" onAction="#Adminfxml" text="Admin" />
+                      <MenuItem mnemonicParsing="false" onAction="#Userfxml" text="Compts user" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Voiture">
+               <items>
+              <MenuItem mnemonicParsing="false" onAction="#Voiturefxml" text="Ouvrir" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Loction">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#Locationfxml" text="Gestion location" />
+                  <MenuItem mnemonicParsing="false" onAction="#Listelocationfxml" text="Location validee" />
+                  <MenuItem mnemonicParsing="false" onAction="#locationRetourneefxml" text="Location retournee" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Locateur">
+              <items>
+                <MenuItem fx:id="locateurbar" mnemonicParsing="false" onAction="#Locateur" text="Ouvrire" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Retoure location">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Retourfxml" text="Gestion retoure" />
+                  <MenuItem mnemonicParsing="false" onAction="#ListRetourfxml" text="Retoure validé" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Divers">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Recufxml" text="Reçu " />
+                  <MenuItem mnemonicParsing="false" onAction="#Facturefxml" text="Facture" />
+                  <Menu mnemonicParsing="false" text="Parque / Place">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#Placefxml" text="Gestion place" />
+                    </items>
+                  </Menu>
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="messagenom" layoutX="138.0" layoutY="151.0" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #4d6b83;" />
+      <Label fx:id="messagePrenom" layoutX="138.0" layoutY="200.0" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #4d6b83;" />
+      <Button fx:id="deconnection" layoutX="836.0" layoutY="7.0" mnemonicParsing="false" onAction="#deconnection" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Deconnecter">
+          <effect>
+              <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+          </effect>
+      </Button>
+      <Button layoutX="885.0" layoutY="124.0" mnemonicParsing="false" onAction="#LoadImg" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #4d6b83;-fx-background-radius: 15;" text="Nouveau image">
+          <effect>
+              <DropShadow height="42.51" radius="20.755" spread="0.04" width="42.51" />
+          </effect>
+      </Button>
+      <Label fx:id="messagefonction" layoutX="138.0" layoutY="253.0" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #4d6b83;" />
+      <Label layoutX="38.0" layoutY="151.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #4d6b83;" text="Nom :" />
+      <Label layoutX="38.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #4d6b83;" text="Prenom :" />
+      <Label layoutX="38.0" layoutY="253.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #4d6b83;" text="Domaine :" />
+      <ImageView fx:id="imageView" fitHeight="145.0" fitWidth="157.0" layoutX="831.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="28.0" layoutY="124.0" mnemonicParsing="false" style="-fx-background-radius: 15; -fx-background-color: #4d6b83;" text="Editer profile">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

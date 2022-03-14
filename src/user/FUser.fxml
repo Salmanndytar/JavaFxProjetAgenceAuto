@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="432.0" prefWidth="936.0" style="-fx-background-color: #4d6b83;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.ControlUser">
+   <children>
+      <Button fx:id="activerbt" layoutX="17.0" layoutY="395.0" mnemonicParsing="false" onAction="#Insert" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #4d6b83; -fx-background-radius: 15;" text="Activer">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="annulerbt" layoutX="440.0" layoutY="395.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #4d6b83; -fx-background-radius: 15;" text="Annuler">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="supprimerbt" layoutX="820.0" layoutY="395.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #4d6b83; -fx-background-radius: 15;" text="Desactiver">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Separator layoutX="4.0" layoutY="376.0" prefHeight="19.0" prefWidth="926.0" />
+      <Separator layoutX="473.0" layoutY="6.0" orientation="VERTICAL" prefHeight="377.0" prefWidth="7.0" />
+      <TableView fx:id="tableAgent" layoutX="498.0" layoutY="66.0" onMouseClicked="#clockTabAg" prefHeight="296.0" prefWidth="412.0">
+        <columns>
+          <TableColumn fx:id="colonneid" prefWidth="119.0" text="Identifiant" />
+            <TableColumn fx:id="columnNom" prefWidth="159.0" text="Nom" />
+          <TableColumn fx:id="colonnedate" prefWidth="111.0" text="Date" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableCaissier" layoutX="500.0" layoutY="68.0" onMouseClicked="#clockTabCa" prefHeight="296.0" prefWidth="412.0">
+        <columns>
+          <TableColumn fx:id="colonneidc" prefWidth="118.0" text="Identifiant" />
+            <TableColumn fx:id="colonenomc" prefWidth="159.0" text="Nom" />
+          <TableColumn fx:id="colonnedatec" prefWidth="112.0" text="Date" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableadmin" layoutX="499.0" layoutY="66.0" onMouseClicked="#clockTabAd" prefHeight="296.0" prefWidth="412.0">
+        <columns>
+            <TableColumn fx:id="colonneida" prefWidth="118.0" text="Identifiant" />
+          <TableColumn fx:id="colonenoma" prefWidth="159.0" text="Nom" />
+          <TableColumn fx:id="colonnedatea" prefWidth="143.0" text="date " />
+        </columns>
+      </TableView>
+      <MenuBar layoutX="496.0" layoutY="-1.0" prefHeight="30.0" prefWidth="231.0">
+        <menus>
+            <Menu mnemonicParsing="false" onAction="#AffichetableAg" text="agent">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#AffichetableAg" text="afficher" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" onAction="#AffichetableCa" text="caissier">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AffichetableCa" text="afficher" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#AffichetableAd" text="admin">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AffichetableAd" text="afficher" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="libelleActive" layoutX="489.0" layoutY="233.0" prefHeight="54.0" prefWidth="425.0" text="Fait un choix de liste utilisateur" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablAgentInactive" layoutX="14.0" layoutY="67.0" onMouseClicked="#clockTabAgInacive" prefHeight="296.0" prefWidth="432.0">
+        <columns>
+          <TableColumn fx:id="colonneidAgI" prefWidth="54.0" text="N°" />
+            <TableColumn fx:id="colonnenomAgI" prefWidth="115.00001525878906" text="Nom" />
+          <TableColumn fx:id="colonneprenomAgI" prefWidth="133.0" text="Prénom" />
+            <TableColumn fx:id="colonnetelAgI" prefWidth="121.0" text="Téléphone" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tablCaissierInactive" layoutX="17.0" layoutY="68.0" onMouseClicked="#clockTabCaInacive" prefHeight="296.0" prefWidth="425.0">
+        <columns>
+          <TableColumn fx:id="colonneidCaI" prefWidth="50.99998474121094" text="N°" />
+            <TableColumn fx:id="colonnenomCaI" prefWidth="116.0" text="Nom" />
+            <TableColumn fx:id="colonneprenomCaI" prefWidth="134.0" text="Prénom" />
+          <TableColumn fx:id="colonnetelCaI" prefWidth="123.0" text="Téléphone" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tablAdminInactive" layoutX="15.0" layoutY="67.0" onMouseClicked="#clockTabAdInacive" prefHeight="296.0" prefWidth="432.0">
+        <columns>
+          <TableColumn fx:id="colonneidAdI" prefWidth="51.0" text="N°" />
+            <TableColumn fx:id="colonnenomAdI" prefWidth="117.00001525878906" text="Nom" />
+            <TableColumn fx:id="colonneprenomAdI" prefWidth="135.0" text="Prénom" />
+          <TableColumn fx:id="colonnetelAdI" prefWidth="121.0" text="Téléphone" />
+        </columns>
+      </TableView>
+      <MenuBar layoutX="12.0" layoutY="-1.0" prefHeight="30.0" prefWidth="210.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Agent">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AffichetableAgInactive" text="Lister" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Caissier">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AffichetableCaInactive" text="Lister" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Admin">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AffichetableAdInactive" text="Lister" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="titreListeInactive" layoutX="12.0" layoutY="31.0" prefHeight="30.0" prefWidth="223.0" textFill="WHITE" />
+      <Label fx:id="titreListe" layoutX="498.0" layoutY="33.0" prefHeight="30.0" prefWidth="231.0" textFill="WHITE" />
+      <Label fx:id="libelleInactive" layoutX="6.0" layoutY="227.0" prefHeight="54.0" prefWidth="451.0" text="Faite choix de lister pour active un user" textFill="WHITE">
+         <font>
+            <Font name="Arial Narrow Bold Italic" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
